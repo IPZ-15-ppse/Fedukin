@@ -13,7 +13,7 @@ let score = 0;
 
 let food = {
   x: Msth.floor((Math.random() * 17 + 1)) * box,
-  y: Msth.floor((Math.random() * 15 + 1)) * box,
+  y: Msth.floor((Math.random() * 15 + 3)) * box,
 };
 
 function drawGame() {
