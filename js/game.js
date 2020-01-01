@@ -31,6 +31,13 @@ function drawGame() {
 		ctx.fillStyle = "black";
 		ctx.fillRect(snake[i].x, snake[i].y, box, box);
 	}
+<<<<<<< HEAD
+=======
+
+	ctx.fillStyle = "white";
+	ctx.font = "50px Arial";
+	ctx.fillText(score, box * 2.5, box * 1.5);
+>>>>>>> lab3.2
 }
 
 let game = setInterval(drawGame, 100);
