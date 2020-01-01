@@ -11,6 +11,11 @@ let box = 32;
 
 let score = 0;
 
+let food = {
+  x: Msth.floor((Math.random() * 17 + 1)) * box,
+  y: Msth.floor((Math.random() * 15 + 1)) * box,
+};
+
 function drawGame() {
     ctx.drawImage(background, 0, 0);
 }
