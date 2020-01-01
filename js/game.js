@@ -38,6 +38,10 @@ function drawGame() {
 	ctx.font = "50px Arial";
 	ctx.fillText(score, box * 2.5, box * 1.5);
 >>>>>>> lab3.2
+
+	eatTail(newHead, snake);
+
+	snake.unshift(newHead);
 }
 
 let game = setInterval(drawGame, 100);
