@@ -33,6 +33,7 @@ function drawGame() {
 	}
 
 	ctx.fillStyle = "white";
+	ctx.font = "50px Arial";
 }
 
 let game = setInterval(drawGame, 100);
