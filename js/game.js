@@ -34,6 +34,7 @@ function drawGame() {
 
 	ctx.fillStyle = "white";
 	ctx.font = "50px Arial";
+	ctx.fillText(score, box * 2.5, box * 1.5);
 }
 
 let game = setInterval(drawGame, 100);
