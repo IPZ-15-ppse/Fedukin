@@ -14,3 +14,5 @@ let score = 0;
 function drawGame() {
     ctx.drawImage(background, 0, 0);
 }
+
+let game = setInterval(drawGame, 100);
