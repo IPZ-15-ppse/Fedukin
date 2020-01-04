@@ -1,9 +1,19 @@
+/**
+*храним ссылку на <canvas> элемент в переменной canvas.
+*Далее мы создаём переменную ctx для хранения 2D визуализации контекста — метод, который используется для отрисовки в Canvas.
+*/
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+/**
+*создание объекта ground и указываем нужное изображение
+*/
 const ground = new Image();
 ground.src = "img/ground.png";
 
+/**
+*создание объекта foogImg и указываем нужное изображение
+*/
 const foodImg = new Image();
 foodImg.src = "img/food.png";
 
@@ -22,10 +32,16 @@ snake[0] = {
   y: 10 * box
 };
 
+/**
+*при нажатии на какую-либо кнопку вызывает метод direction
+*/
 document.addEventListener("keydown", direction);
 
 let dir;
-
+/**
+ * Функция обратывает
+ * @param {object} event [[Description]]
+ */
 function direction(event) {
   if(event.keyCode == 37 && dir != "right")
     dir = "left";
@@ -37,6 +53,11 @@ function direction(event) {
     dir = "down";
 }
 
+/**
+ * [[Description]]
+ * @param {object}   head [[Description]]
+ * @param {number} arr  [[Description]]
+ */
 function eatTail(head, arr) {
   for(let i = 0; i < arr.length; i++) {
     if(head.x == arr[i].x && head.y == arr[i].y)
@@ -44,6 +65,9 @@ function eatTail(head, arr) {
   }
 }
 
+/**
+ * Функция для отрисовки поля, змейки и еды
+ */
 function drawGame() {
   ctx.drawImage(ground, 0, 0);
 
@@ -89,12 +113,8 @@ function drawGame() {
 
   snake.unshift(newHead);
 }
-
+/**
+*Благодаря бесконечности функции setInterval функция drawGame() будет выполняться каждые 100 мс
+*/
 let game = setInterval(drawGame, 100);
 
-
-
-
-
-
-//
