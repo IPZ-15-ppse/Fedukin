@@ -54,9 +54,9 @@ function direction(event) {
 }
 
 /**
- * [[Description]]
- * @param {object}   head [[Description]]
- * @param {number} arr  [[Description]]
+ * Функция проверяет сталкнулась ли голова змейки с телом или нет.
+ * @param {object}   head голова змеи
+ * @param {number} arr  тело змеи
  */
 function eatTail(head, arr) {
   for(let i = 0; i < arr.length; i++) {
